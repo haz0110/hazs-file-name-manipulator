@@ -1,4 +1,5 @@
 import os
+import re
 
 class fileData():
     fileType: str
@@ -13,7 +14,7 @@ class fileData():
     hyphenNumberFormat: bool = False
 
     def __init__(self, name):
-        self.name : str = name
+        self.name = name
         self.fileNameOnly = self.name.rsplit(".", 1)[0]
         self.fileType = self.name.rsplit(".", 1)[1]
 

@@ -15,9 +15,15 @@ def selectFolder():
 def listFiles(folderPath: str):
     fileList = os.listdir(folderPath)
     for currentFile in fileList:
-        if os.path.isfile(f"{folderPath}{currentFile}") == 
+        if os.path.isfile(f"{folderPath}{currentFile}") == False:
+            fileList.remove(currentFile)
+    
+    return fileList
 
-
+def listFileAndFolders(folderPath: str):
+    fileAndFolderList = os.listdir(folderPath)
+    return fileAndFolderList
+            
 #def listFilesAndFolders():
 
 # Select a File to specify the path.
